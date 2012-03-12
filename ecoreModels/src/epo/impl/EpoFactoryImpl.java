@@ -63,10 +63,13 @@ public class EpoFactoryImpl extends EFactoryImpl implements EpoFactory {
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case EpoPackage.PURCHASE_ORDER: return createPurchaseOrder();
-			case EpoPackage.US_ADDRESS: return createUSAddress();
 			case EpoPackage.ITEM: return createItem();
+			case EpoPackage.US_ADDRESS: return createUSAddress();
+			case EpoPackage.PURCHASE_ORDER: return createPurchaseOrder();
 			case EpoPackage.SUPPLIER: return createSupplier();
+			case EpoPackage.CUSTOMER: return createCustomer();
+			case EpoPackage.GLOBAL_ADDRESS: return createGlobalAddress();
+			case EpoPackage.GLOBAL_LOCATION: return createGlobalLocation();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -80,6 +83,8 @@ public class EpoFactoryImpl extends EFactoryImpl implements EpoFactory {
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
+			case EpoPackage.ORDER_STATUS:
+				return createOrderStatusFromString(eDataType, initialValue);
 			case EpoPackage.SKU:
 				return createSKUFromString(eDataType, initialValue);
 			case EpoPackage.DATE:
@@ -97,6 +102,8 @@ public class EpoFactoryImpl extends EFactoryImpl implements EpoFactory {
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
+			case EpoPackage.ORDER_STATUS:
+				return convertOrderStatusToString(eDataType, instanceValue);
 			case EpoPackage.SKU:
 				return convertSKUToString(eDataType, instanceValue);
 			case EpoPackage.DATE:
@@ -144,6 +151,56 @@ public class EpoFactoryImpl extends EFactoryImpl implements EpoFactory {
 	public Supplier createSupplier() {
 		SupplierImpl supplier = new SupplierImpl();
 		return supplier;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Customer createCustomer() {
+		CustomerImpl customer = new CustomerImpl();
+		return customer;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GlobalAddress createGlobalAddress() {
+		GlobalAddressImpl globalAddress = new GlobalAddressImpl();
+		return globalAddress;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GlobalLocation createGlobalLocation() {
+		GlobalLocationImpl globalLocation = new GlobalLocationImpl();
+		return globalLocation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public OrderStatus createOrderStatusFromString(EDataType eDataType, String initialValue) {
+		OrderStatus result = OrderStatus.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertOrderStatusToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
 	}
 
 	/**

@@ -70,27 +70,54 @@ public class EpoSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case EpoPackage.PURCHASE_ORDER: {
-				PurchaseOrder purchaseOrder = (PurchaseOrder)theEObject;
-				T result = casePurchaseOrder(purchaseOrder);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case EpoPackage.US_ADDRESS: {
-				USAddress usAddress = (USAddress)theEObject;
-				T result = caseUSAddress(usAddress);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case EpoPackage.ITEM: {
 				Item item = (Item)theEObject;
 				T result = caseItem(item);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case EpoPackage.US_ADDRESS: {
+				USAddress usAddress = (USAddress)theEObject;
+				T result = caseUSAddress(usAddress);
+				if (result == null) result = caseAddress(usAddress);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case EpoPackage.PURCHASE_ORDER: {
+				PurchaseOrder purchaseOrder = (PurchaseOrder)theEObject;
+				T result = casePurchaseOrder(purchaseOrder);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case EpoPackage.ADDRESS: {
+				Address address = (Address)theEObject;
+				T result = caseAddress(address);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case EpoPackage.SUPPLIER: {
 				Supplier supplier = (Supplier)theEObject;
 				T result = caseSupplier(supplier);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case EpoPackage.CUSTOMER: {
+				Customer customer = (Customer)theEObject;
+				T result = caseCustomer(customer);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case EpoPackage.GLOBAL_ADDRESS: {
+				GlobalAddress globalAddress = (GlobalAddress)theEObject;
+				T result = caseGlobalAddress(globalAddress);
+				if (result == null) result = caseAddress(globalAddress);
+				if (result == null) result = caseGlobalLocation(globalAddress);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case EpoPackage.GLOBAL_LOCATION: {
+				GlobalLocation globalLocation = (GlobalLocation)theEObject;
+				T result = caseGlobalLocation(globalLocation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -110,6 +137,21 @@ public class EpoSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T casePurchaseOrder(PurchaseOrder object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Address</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Address</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAddress(Address object) {
 		return null;
 	}
 
@@ -155,6 +197,51 @@ public class EpoSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseSupplier(Supplier object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Customer</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Customer</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCustomer(Customer object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Global Address</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Global Address</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseGlobalAddress(GlobalAddress object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Global Location</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Global Location</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseGlobalLocation(GlobalLocation object) {
 		return null;
 	}
 

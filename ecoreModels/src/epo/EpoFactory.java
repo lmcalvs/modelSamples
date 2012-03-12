@@ -62,6 +62,33 @@ public interface EpoFactory extends EFactory {
 	Supplier createSupplier();
 
 	/**
+	 * Returns a new object of class '<em>Customer</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Customer</em>'.
+	 * @generated
+	 */
+	Customer createCustomer();
+
+	/**
+	 * Returns a new object of class '<em>Global Address</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Global Address</em>'.
+	 * @generated
+	 */
+	GlobalAddress createGlobalAddress();
+
+	/**
+	 * Returns a new object of class '<em>Global Location</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Global Location</em>'.
+	 * @generated
+	 */
+	GlobalLocation createGlobalLocation();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

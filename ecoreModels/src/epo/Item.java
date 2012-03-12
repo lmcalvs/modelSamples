@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
+ *   <li>{@link epo.Item#getOrder <em>Order</em>}</li>
  *   <li>{@link epo.Item#getProductName <em>Product Name</em>}</li>
  *   <li>{@link epo.Item#getQuantity <em>Quantity</em>}</li>
  *   <li>{@link epo.Item#getUSPrice <em>US Price</em>}</li>
@@ -32,6 +33,34 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Item extends EObject {
+	/**
+	 * Returns the value of the '<em><b>Order</b></em>' container reference.
+	 * It is bidirectional and its opposite is '{@link epo.PurchaseOrder#getItems <em>Items</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Order</em>' container reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Order</em>' container reference.
+	 * @see #setOrder(PurchaseOrder)
+	 * @see epo.EpoPackage#getItem_Order()
+	 * @see epo.PurchaseOrder#getItems
+	 * @model opposite="items" required="true"
+	 * @generated
+	 */
+	PurchaseOrder getOrder();
+
+	/**
+	 * Sets the value of the '{@link epo.Item#getOrder <em>Order</em>}' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Order</em>' container reference.
+	 * @see #getOrder()
+	 * @generated
+	 */
+	void setOrder(PurchaseOrder value);
+
 	/**
 	 * Returns the value of the '<em><b>Product Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->

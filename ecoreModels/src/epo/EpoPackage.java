@@ -9,6 +9,7 @@ package epo;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -68,61 +69,7 @@ public interface EpoPackage extends EPackage {
 	 * @see epo.impl.EpoPackageImpl#getPurchaseOrder()
 	 * @generated
 	 */
-	int PURCHASE_ORDER = 0;
-
-	/**
-	 * The feature id for the '<em><b>Comment</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PURCHASE_ORDER__COMMENT = 0;
-
-	/**
-	 * The feature id for the '<em><b>Order Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PURCHASE_ORDER__ORDER_DATE = 1;
-
-	/**
-	 * The feature id for the '<em><b>Ship To</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PURCHASE_ORDER__SHIP_TO = 2;
-
-	/**
-	 * The feature id for the '<em><b>Bill To</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PURCHASE_ORDER__BILL_TO = 3;
-
-	/**
-	 * The feature id for the '<em><b>Items</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PURCHASE_ORDER__ITEMS = 4;
-
-	/**
-	 * The number of structural features of the '<em>Purchase Order</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PURCHASE_ORDER_FEATURE_COUNT = 5;
+	int PURCHASE_ORDER = 2;
 
 	/**
 	 * The meta object id for the '{@link epo.impl.USAddressImpl <em>US Address</em>}' class.
@@ -135,69 +82,6 @@ public interface EpoPackage extends EPackage {
 	int US_ADDRESS = 1;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int US_ADDRESS__NAME = 0;
-
-	/**
-	 * The feature id for the '<em><b>Street</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int US_ADDRESS__STREET = 1;
-
-	/**
-	 * The feature id for the '<em><b>City</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int US_ADDRESS__CITY = 2;
-
-	/**
-	 * The feature id for the '<em><b>State</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int US_ADDRESS__STATE = 3;
-
-	/**
-	 * The feature id for the '<em><b>Zip</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int US_ADDRESS__ZIP = 4;
-
-	/**
-	 * The feature id for the '<em><b>Country</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int US_ADDRESS__COUNTRY = 5;
-
-	/**
-	 * The number of structural features of the '<em>US Address</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int US_ADDRESS_FEATURE_COUNT = 6;
-
-	/**
 	 * The meta object id for the '{@link epo.impl.ItemImpl <em>Item</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -205,7 +89,16 @@ public interface EpoPackage extends EPackage {
 	 * @see epo.impl.EpoPackageImpl#getItem()
 	 * @generated
 	 */
-	int ITEM = 2;
+	int ITEM = 0;
+
+	/**
+	 * The feature id for the '<em><b>Order</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ITEM__ORDER = 0;
 
 	/**
 	 * The feature id for the '<em><b>Product Name</b></em>' attribute.
@@ -214,7 +107,7 @@ public interface EpoPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ITEM__PRODUCT_NAME = 0;
+	int ITEM__PRODUCT_NAME = 1;
 
 	/**
 	 * The feature id for the '<em><b>Quantity</b></em>' attribute.
@@ -223,7 +116,7 @@ public interface EpoPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ITEM__QUANTITY = 1;
+	int ITEM__QUANTITY = 2;
 
 	/**
 	 * The feature id for the '<em><b>US Price</b></em>' attribute.
@@ -232,7 +125,7 @@ public interface EpoPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ITEM__US_PRICE = 2;
+	int ITEM__US_PRICE = 3;
 
 	/**
 	 * The feature id for the '<em><b>Comment</b></em>' attribute.
@@ -241,7 +134,7 @@ public interface EpoPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ITEM__COMMENT = 3;
+	int ITEM__COMMENT = 4;
 
 	/**
 	 * The feature id for the '<em><b>Ship Date</b></em>' attribute.
@@ -250,7 +143,7 @@ public interface EpoPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ITEM__SHIP_DATE = 4;
+	int ITEM__SHIP_DATE = 5;
 
 	/**
 	 * The feature id for the '<em><b>Part Num</b></em>' attribute.
@@ -259,7 +152,7 @@ public interface EpoPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ITEM__PART_NUM = 5;
+	int ITEM__PART_NUM = 6;
 
 	/**
 	 * The number of structural features of the '<em>Item</em>' class.
@@ -268,7 +161,197 @@ public interface EpoPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ITEM_FEATURE_COUNT = 6;
+	int ITEM_FEATURE_COUNT = 7;
+
+	/**
+	 * The meta object id for the '{@link epo.impl.AddressImpl <em>Address</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see epo.impl.AddressImpl
+	 * @see epo.impl.EpoPackageImpl#getAddress()
+	 * @generated
+	 */
+	int ADDRESS = 3;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDRESS__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Country</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDRESS__COUNTRY = 1;
+
+	/**
+	 * The number of structural features of the '<em>Address</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADDRESS_FEATURE_COUNT = 2;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int US_ADDRESS__NAME = ADDRESS__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Country</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int US_ADDRESS__COUNTRY = ADDRESS__COUNTRY;
+
+	/**
+	 * The feature id for the '<em><b>Street</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int US_ADDRESS__STREET = ADDRESS_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>City</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int US_ADDRESS__CITY = ADDRESS_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>State</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int US_ADDRESS__STATE = ADDRESS_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Zip</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int US_ADDRESS__ZIP = ADDRESS_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of structural features of the '<em>US Address</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int US_ADDRESS_FEATURE_COUNT = ADDRESS_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Items</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PURCHASE_ORDER__ITEMS = 0;
+
+	/**
+	 * The feature id for the '<em><b>Bill To</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PURCHASE_ORDER__BILL_TO = 1;
+
+	/**
+	 * The feature id for the '<em><b>Ship To</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PURCHASE_ORDER__SHIP_TO = 2;
+
+	/**
+	 * The feature id for the '<em><b>Comment</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PURCHASE_ORDER__COMMENT = 3;
+
+	/**
+	 * The feature id for the '<em><b>Order Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PURCHASE_ORDER__ORDER_DATE = 4;
+
+	/**
+	 * The feature id for the '<em><b>Status</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PURCHASE_ORDER__STATUS = 5;
+
+	/**
+	 * The feature id for the '<em><b>Total Amount</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PURCHASE_ORDER__TOTAL_AMOUNT = 6;
+
+	/**
+	 * The feature id for the '<em><b>Customer</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PURCHASE_ORDER__CUSTOMER = 7;
+
+	/**
+	 * The feature id for the '<em><b>Previous Order</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PURCHASE_ORDER__PREVIOUS_ORDER = 8;
+
+	/**
+	 * The number of structural features of the '<em>Purchase Order</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PURCHASE_ORDER_FEATURE_COUNT = 9;
 
 	/**
 	 * The meta object id for the '{@link epo.impl.SupplierImpl <em>Supplier</em>}' class.
@@ -278,7 +361,7 @@ public interface EpoPackage extends EPackage {
 	 * @see epo.impl.EpoPackageImpl#getSupplier()
 	 * @generated
 	 */
-	int SUPPLIER = 3;
+	int SUPPLIER = 4;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -290,31 +373,40 @@ public interface EpoPackage extends EPackage {
 	int SUPPLIER__NAME = 0;
 
 	/**
-	 * The feature id for the '<em><b>Orders</b></em>' attribute list.
+	 * The feature id for the '<em><b>Customers</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SUPPLIER__ORDERS = 1;
+	int SUPPLIER__CUSTOMERS = 1;
 
 	/**
-	 * The feature id for the '<em><b>Priority Orders</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Orders</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SUPPLIER__PRIORITY_ORDERS = 2;
+	int SUPPLIER__ORDERS = 2;
 
 	/**
-	 * The feature id for the '<em><b>Standard Orders</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Pending Orders</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SUPPLIER__STANDARD_ORDERS = 3;
+	int SUPPLIER__PENDING_ORDERS = 3;
+
+	/**
+	 * The feature id for the '<em><b>Shipped Orders</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUPPLIER__SHIPPED_ORDERS = 4;
 
 	/**
 	 * The number of structural features of the '<em>Supplier</em>' class.
@@ -323,7 +415,137 @@ public interface EpoPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SUPPLIER_FEATURE_COUNT = 4;
+	int SUPPLIER_FEATURE_COUNT = 5;
+
+	/**
+	 * The meta object id for the '{@link epo.impl.CustomerImpl <em>Customer</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see epo.impl.CustomerImpl
+	 * @see epo.impl.EpoPackageImpl#getCustomer()
+	 * @generated
+	 */
+	int CUSTOMER = 5;
+
+	/**
+	 * The feature id for the '<em><b>Customer ID</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOMER__CUSTOMER_ID = 0;
+
+	/**
+	 * The feature id for the '<em><b>Orders</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOMER__ORDERS = 1;
+
+	/**
+	 * The number of structural features of the '<em>Customer</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CUSTOMER_FEATURE_COUNT = 2;
+
+	/**
+	 * The meta object id for the '{@link epo.impl.GlobalAddressImpl <em>Global Address</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see epo.impl.GlobalAddressImpl
+	 * @see epo.impl.EpoPackageImpl#getGlobalAddress()
+	 * @generated
+	 */
+	int GLOBAL_ADDRESS = 6;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GLOBAL_ADDRESS__NAME = ADDRESS__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Country</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GLOBAL_ADDRESS__COUNTRY = ADDRESS__COUNTRY;
+
+	/**
+	 * The feature id for the '<em><b>Country Code</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GLOBAL_ADDRESS__COUNTRY_CODE = ADDRESS_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Location</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GLOBAL_ADDRESS__LOCATION = ADDRESS_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Global Address</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GLOBAL_ADDRESS_FEATURE_COUNT = ADDRESS_FEATURE_COUNT + 2;
+
+	/**
+	 * The meta object id for the '{@link epo.impl.GlobalLocationImpl <em>Global Location</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see epo.impl.GlobalLocationImpl
+	 * @see epo.impl.EpoPackageImpl#getGlobalLocation()
+	 * @generated
+	 */
+	int GLOBAL_LOCATION = 7;
+
+	/**
+	 * The feature id for the '<em><b>Country Code</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GLOBAL_LOCATION__COUNTRY_CODE = 0;
+
+	/**
+	 * The number of structural features of the '<em>Global Location</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GLOBAL_LOCATION_FEATURE_COUNT = 1;
+
+	/**
+	 * The meta object id for the '{@link epo.OrderStatus <em>Order Status</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see epo.OrderStatus
+	 * @see epo.impl.EpoPackageImpl#getOrderStatus()
+	 * @generated
+	 */
+	int ORDER_STATUS = 8;
 
 	/**
 	 * The meta object id for the '<em>SKU</em>' data type.
@@ -333,7 +555,7 @@ public interface EpoPackage extends EPackage {
 	 * @see epo.impl.EpoPackageImpl#getSKU()
 	 * @generated
 	 */
-	int SKU = 4;
+	int SKU = 9;
 
 	/**
 	 * The meta object id for the '<em>Date</em>' data type.
@@ -343,7 +565,7 @@ public interface EpoPackage extends EPackage {
 	 * @see epo.impl.EpoPackageImpl#getDate()
 	 * @generated
 	 */
-	int DATE = 5;
+	int DATE = 10;
 
 
 	/**
@@ -377,6 +599,82 @@ public interface EpoPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getPurchaseOrder_OrderDate();
+
+	/**
+	 * Returns the meta object for the attribute '{@link epo.PurchaseOrder#getStatus <em>Status</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Status</em>'.
+	 * @see epo.PurchaseOrder#getStatus()
+	 * @see #getPurchaseOrder()
+	 * @generated
+	 */
+	EAttribute getPurchaseOrder_Status();
+
+	/**
+	 * Returns the meta object for the attribute '{@link epo.PurchaseOrder#getTotalAmount <em>Total Amount</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Total Amount</em>'.
+	 * @see epo.PurchaseOrder#getTotalAmount()
+	 * @see #getPurchaseOrder()
+	 * @generated
+	 */
+	EAttribute getPurchaseOrder_TotalAmount();
+
+	/**
+	 * Returns the meta object for the reference '{@link epo.PurchaseOrder#getCustomer <em>Customer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Customer</em>'.
+	 * @see epo.PurchaseOrder#getCustomer()
+	 * @see #getPurchaseOrder()
+	 * @generated
+	 */
+	EReference getPurchaseOrder_Customer();
+
+	/**
+	 * Returns the meta object for the reference '{@link epo.PurchaseOrder#getPreviousOrder <em>Previous Order</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Previous Order</em>'.
+	 * @see epo.PurchaseOrder#getPreviousOrder()
+	 * @see #getPurchaseOrder()
+	 * @generated
+	 */
+	EReference getPurchaseOrder_PreviousOrder();
+
+	/**
+	 * Returns the meta object for class '{@link epo.Address <em>Address</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Address</em>'.
+	 * @see epo.Address
+	 * @generated
+	 */
+	EClass getAddress();
+
+	/**
+	 * Returns the meta object for the attribute '{@link epo.Address#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see epo.Address#getName()
+	 * @see #getAddress()
+	 * @generated
+	 */
+	EAttribute getAddress_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link epo.Address#getCountry <em>Country</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Country</em>'.
+	 * @see epo.Address#getCountry()
+	 * @see #getAddress()
+	 * @generated
+	 */
+	EAttribute getAddress_Country();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link epo.PurchaseOrder#getShipTo <em>Ship To</em>}'.
@@ -420,17 +718,6 @@ public interface EpoPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getUSAddress();
-
-	/**
-	 * Returns the meta object for the attribute '{@link epo.USAddress#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see epo.USAddress#getName()
-	 * @see #getUSAddress()
-	 * @generated
-	 */
-	EAttribute getUSAddress_Name();
 
 	/**
 	 * Returns the meta object for the attribute '{@link epo.USAddress#getStreet <em>Street</em>}'.
@@ -477,17 +764,6 @@ public interface EpoPackage extends EPackage {
 	EAttribute getUSAddress_Zip();
 
 	/**
-	 * Returns the meta object for the attribute '{@link epo.USAddress#getCountry <em>Country</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Country</em>'.
-	 * @see epo.USAddress#getCountry()
-	 * @see #getUSAddress()
-	 * @generated
-	 */
-	EAttribute getUSAddress_Country();
-
-	/**
 	 * Returns the meta object for class '{@link epo.Item <em>Item</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -496,6 +772,17 @@ public interface EpoPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getItem();
+
+	/**
+	 * Returns the meta object for the container reference '{@link epo.Item#getOrder <em>Order</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Order</em>'.
+	 * @see epo.Item#getOrder()
+	 * @see #getItem()
+	 * @generated
+	 */
+	EReference getItem_Order();
 
 	/**
 	 * Returns the meta object for the attribute '{@link epo.Item#getProductName <em>Product Name</em>}'.
@@ -585,37 +872,132 @@ public interface EpoPackage extends EPackage {
 	EAttribute getSupplier_Name();
 
 	/**
-	 * Returns the meta object for the attribute list '{@link epo.Supplier#getOrders <em>Orders</em>}'.
+	 * Returns the meta object for the containment reference list '{@link epo.Supplier#getCustomers <em>Customers</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Orders</em>'.
+	 * @return the meta object for the containment reference list '<em>Customers</em>'.
+	 * @see epo.Supplier#getCustomers()
+	 * @see #getSupplier()
+	 * @generated
+	 */
+	EReference getSupplier_Customers();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link epo.Supplier#getOrders <em>Orders</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Orders</em>'.
 	 * @see epo.Supplier#getOrders()
 	 * @see #getSupplier()
 	 * @generated
 	 */
-	EAttribute getSupplier_Orders();
+	EReference getSupplier_Orders();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link epo.Supplier#getPriorityOrders <em>Priority Orders</em>}'.
+	 * Returns the meta object for the reference list '{@link epo.Supplier#getPendingOrders <em>Pending Orders</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Priority Orders</em>'.
-	 * @see epo.Supplier#getPriorityOrders()
+	 * @return the meta object for the reference list '<em>Pending Orders</em>'.
+	 * @see epo.Supplier#getPendingOrders()
 	 * @see #getSupplier()
 	 * @generated
 	 */
-	EReference getSupplier_PriorityOrders();
+	EReference getSupplier_PendingOrders();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link epo.Supplier#getStandardOrders <em>Standard Orders</em>}'.
+	 * Returns the meta object for the reference list '{@link epo.Supplier#getShippedOrders <em>Shipped Orders</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Standard Orders</em>'.
-	 * @see epo.Supplier#getStandardOrders()
+	 * @return the meta object for the reference list '<em>Shipped Orders</em>'.
+	 * @see epo.Supplier#getShippedOrders()
 	 * @see #getSupplier()
 	 * @generated
 	 */
-	EReference getSupplier_StandardOrders();
+	EReference getSupplier_ShippedOrders();
+
+	/**
+	 * Returns the meta object for class '{@link epo.Customer <em>Customer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Customer</em>'.
+	 * @see epo.Customer
+	 * @generated
+	 */
+	EClass getCustomer();
+
+	/**
+	 * Returns the meta object for the attribute '{@link epo.Customer#getCustomerID <em>Customer ID</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Customer ID</em>'.
+	 * @see epo.Customer#getCustomerID()
+	 * @see #getCustomer()
+	 * @generated
+	 */
+	EAttribute getCustomer_CustomerID();
+
+	/**
+	 * Returns the meta object for the reference list '{@link epo.Customer#getOrders <em>Orders</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Orders</em>'.
+	 * @see epo.Customer#getOrders()
+	 * @see #getCustomer()
+	 * @generated
+	 */
+	EReference getCustomer_Orders();
+
+	/**
+	 * Returns the meta object for class '{@link epo.GlobalAddress <em>Global Address</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Global Address</em>'.
+	 * @see epo.GlobalAddress
+	 * @generated
+	 */
+	EClass getGlobalAddress();
+
+	/**
+	 * Returns the meta object for the attribute list '{@link epo.GlobalAddress#getLocation <em>Location</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Location</em>'.
+	 * @see epo.GlobalAddress#getLocation()
+	 * @see #getGlobalAddress()
+	 * @generated
+	 */
+	EAttribute getGlobalAddress_Location();
+
+	/**
+	 * Returns the meta object for class '{@link epo.GlobalLocation <em>Global Location</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Global Location</em>'.
+	 * @see epo.GlobalLocation
+	 * @generated
+	 */
+	EClass getGlobalLocation();
+
+	/**
+	 * Returns the meta object for the attribute '{@link epo.GlobalLocation#getCountryCode <em>Country Code</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Country Code</em>'.
+	 * @see epo.GlobalLocation#getCountryCode()
+	 * @see #getGlobalLocation()
+	 * @generated
+	 */
+	EAttribute getGlobalLocation_CountryCode();
+
+	/**
+	 * Returns the meta object for enum '{@link epo.OrderStatus <em>Order Status</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Order Status</em>'.
+	 * @see epo.OrderStatus
+	 * @generated
+	 */
+	EEnum getOrderStatus();
 
 	/**
 	 * Returns the meta object for data type '{@link java.lang.String <em>SKU</em>}'.
@@ -688,6 +1070,64 @@ public interface EpoPackage extends EPackage {
 		EAttribute PURCHASE_ORDER__ORDER_DATE = eINSTANCE.getPurchaseOrder_OrderDate();
 
 		/**
+		 * The meta object literal for the '<em><b>Status</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PURCHASE_ORDER__STATUS = eINSTANCE.getPurchaseOrder_Status();
+
+		/**
+		 * The meta object literal for the '<em><b>Total Amount</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PURCHASE_ORDER__TOTAL_AMOUNT = eINSTANCE.getPurchaseOrder_TotalAmount();
+
+		/**
+		 * The meta object literal for the '<em><b>Customer</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PURCHASE_ORDER__CUSTOMER = eINSTANCE.getPurchaseOrder_Customer();
+
+		/**
+		 * The meta object literal for the '<em><b>Previous Order</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PURCHASE_ORDER__PREVIOUS_ORDER = eINSTANCE.getPurchaseOrder_PreviousOrder();
+
+		/**
+		 * The meta object literal for the '{@link epo.impl.AddressImpl <em>Address</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see epo.impl.AddressImpl
+		 * @see epo.impl.EpoPackageImpl#getAddress()
+		 * @generated
+		 */
+		EClass ADDRESS = eINSTANCE.getAddress();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ADDRESS__NAME = eINSTANCE.getAddress_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Country</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ADDRESS__COUNTRY = eINSTANCE.getAddress_Country();
+
+		/**
 		 * The meta object literal for the '<em><b>Ship To</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -722,14 +1162,6 @@ public interface EpoPackage extends EPackage {
 		EClass US_ADDRESS = eINSTANCE.getUSAddress();
 
 		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute US_ADDRESS__NAME = eINSTANCE.getUSAddress_Name();
-
-		/**
 		 * The meta object literal for the '<em><b>Street</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -762,14 +1194,6 @@ public interface EpoPackage extends EPackage {
 		EAttribute US_ADDRESS__ZIP = eINSTANCE.getUSAddress_Zip();
 
 		/**
-		 * The meta object literal for the '<em><b>Country</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute US_ADDRESS__COUNTRY = eINSTANCE.getUSAddress_Country();
-
-		/**
 		 * The meta object literal for the '{@link epo.impl.ItemImpl <em>Item</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -778,6 +1202,14 @@ public interface EpoPackage extends EPackage {
 		 * @generated
 		 */
 		EClass ITEM = eINSTANCE.getItem();
+
+		/**
+		 * The meta object literal for the '<em><b>Order</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ITEM__ORDER = eINSTANCE.getItem_Order();
 
 		/**
 		 * The meta object literal for the '<em><b>Product Name</b></em>' attribute feature.
@@ -846,28 +1278,108 @@ public interface EpoPackage extends EPackage {
 		EAttribute SUPPLIER__NAME = eINSTANCE.getSupplier_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Orders</b></em>' attribute list feature.
+		 * The meta object literal for the '<em><b>Customers</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute SUPPLIER__ORDERS = eINSTANCE.getSupplier_Orders();
+		EReference SUPPLIER__CUSTOMERS = eINSTANCE.getSupplier_Customers();
 
 		/**
-		 * The meta object literal for the '<em><b>Priority Orders</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Orders</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SUPPLIER__PRIORITY_ORDERS = eINSTANCE.getSupplier_PriorityOrders();
+		EReference SUPPLIER__ORDERS = eINSTANCE.getSupplier_Orders();
 
 		/**
-		 * The meta object literal for the '<em><b>Standard Orders</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Pending Orders</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference SUPPLIER__STANDARD_ORDERS = eINSTANCE.getSupplier_StandardOrders();
+		EReference SUPPLIER__PENDING_ORDERS = eINSTANCE.getSupplier_PendingOrders();
+
+		/**
+		 * The meta object literal for the '<em><b>Shipped Orders</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SUPPLIER__SHIPPED_ORDERS = eINSTANCE.getSupplier_ShippedOrders();
+
+		/**
+		 * The meta object literal for the '{@link epo.impl.CustomerImpl <em>Customer</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see epo.impl.CustomerImpl
+		 * @see epo.impl.EpoPackageImpl#getCustomer()
+		 * @generated
+		 */
+		EClass CUSTOMER = eINSTANCE.getCustomer();
+
+		/**
+		 * The meta object literal for the '<em><b>Customer ID</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CUSTOMER__CUSTOMER_ID = eINSTANCE.getCustomer_CustomerID();
+
+		/**
+		 * The meta object literal for the '<em><b>Orders</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CUSTOMER__ORDERS = eINSTANCE.getCustomer_Orders();
+
+		/**
+		 * The meta object literal for the '{@link epo.impl.GlobalAddressImpl <em>Global Address</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see epo.impl.GlobalAddressImpl
+		 * @see epo.impl.EpoPackageImpl#getGlobalAddress()
+		 * @generated
+		 */
+		EClass GLOBAL_ADDRESS = eINSTANCE.getGlobalAddress();
+
+		/**
+		 * The meta object literal for the '<em><b>Location</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GLOBAL_ADDRESS__LOCATION = eINSTANCE.getGlobalAddress_Location();
+
+		/**
+		 * The meta object literal for the '{@link epo.impl.GlobalLocationImpl <em>Global Location</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see epo.impl.GlobalLocationImpl
+		 * @see epo.impl.EpoPackageImpl#getGlobalLocation()
+		 * @generated
+		 */
+		EClass GLOBAL_LOCATION = eINSTANCE.getGlobalLocation();
+
+		/**
+		 * The meta object literal for the '<em><b>Country Code</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GLOBAL_LOCATION__COUNTRY_CODE = eINSTANCE.getGlobalLocation_CountryCode();
+
+		/**
+		 * The meta object literal for the '{@link epo.OrderStatus <em>Order Status</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see epo.OrderStatus
+		 * @see epo.impl.EpoPackageImpl#getOrderStatus()
+		 * @generated
+		 */
+		EEnum ORDER_STATUS = eINSTANCE.getOrderStatus();
 
 		/**
 		 * The meta object literal for the '<em>SKU</em>' data type.

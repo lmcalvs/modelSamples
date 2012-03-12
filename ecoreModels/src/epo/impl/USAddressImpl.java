@@ -23,38 +23,16 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link epo.impl.USAddressImpl#getName <em>Name</em>}</li>
  *   <li>{@link epo.impl.USAddressImpl#getStreet <em>Street</em>}</li>
  *   <li>{@link epo.impl.USAddressImpl#getCity <em>City</em>}</li>
  *   <li>{@link epo.impl.USAddressImpl#getState <em>State</em>}</li>
  *   <li>{@link epo.impl.USAddressImpl#getZip <em>Zip</em>}</li>
- *   <li>{@link epo.impl.USAddressImpl#getCountry <em>Country</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class USAddressImpl extends EObjectImpl implements USAddress {
-	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
-
+public class USAddressImpl extends AddressImpl implements USAddress {
 	/**
 	 * The default value of the '{@link #getStreet() <em>Street</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -136,26 +114,6 @@ public class USAddressImpl extends EObjectImpl implements USAddress {
 	protected int zip = ZIP_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getCountry() <em>Country</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCountry()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String COUNTRY_EDEFAULT = "US";
-
-	/**
-	 * The cached value of the '{@link #getCountry() <em>Country</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getCountry()
-	 * @generated
-	 * @ordered
-	 */
-	protected String country = COUNTRY_EDEFAULT;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -172,27 +130,6 @@ public class USAddressImpl extends EObjectImpl implements USAddress {
 	@Override
 	protected EClass eStaticClass() {
 		return EpoPackage.Literals.US_ADDRESS;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getName() {
-		return name;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, EpoPackage.US_ADDRESS__NAME, oldName, name));
 	}
 
 	/**
@@ -284,20 +221,9 @@ public class USAddressImpl extends EObjectImpl implements USAddress {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getCountry() {
-		return country;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case EpoPackage.US_ADDRESS__NAME:
-				return getName();
 			case EpoPackage.US_ADDRESS__STREET:
 				return getStreet();
 			case EpoPackage.US_ADDRESS__CITY:
@@ -306,8 +232,6 @@ public class USAddressImpl extends EObjectImpl implements USAddress {
 				return getState();
 			case EpoPackage.US_ADDRESS__ZIP:
 				return getZip();
-			case EpoPackage.US_ADDRESS__COUNTRY:
-				return getCountry();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -320,9 +244,6 @@ public class USAddressImpl extends EObjectImpl implements USAddress {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case EpoPackage.US_ADDRESS__NAME:
-				setName((String)newValue);
-				return;
 			case EpoPackage.US_ADDRESS__STREET:
 				setStreet((String)newValue);
 				return;
@@ -347,9 +268,6 @@ public class USAddressImpl extends EObjectImpl implements USAddress {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case EpoPackage.US_ADDRESS__NAME:
-				setName(NAME_EDEFAULT);
-				return;
 			case EpoPackage.US_ADDRESS__STREET:
 				setStreet(STREET_EDEFAULT);
 				return;
@@ -374,8 +292,6 @@ public class USAddressImpl extends EObjectImpl implements USAddress {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case EpoPackage.US_ADDRESS__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case EpoPackage.US_ADDRESS__STREET:
 				return STREET_EDEFAULT == null ? street != null : !STREET_EDEFAULT.equals(street);
 			case EpoPackage.US_ADDRESS__CITY:
@@ -384,8 +300,6 @@ public class USAddressImpl extends EObjectImpl implements USAddress {
 				return STATE_EDEFAULT == null ? state != null : !STATE_EDEFAULT.equals(state);
 			case EpoPackage.US_ADDRESS__ZIP:
 				return zip != ZIP_EDEFAULT;
-			case EpoPackage.US_ADDRESS__COUNTRY:
-				return COUNTRY_EDEFAULT == null ? country != null : !COUNTRY_EDEFAULT.equals(country);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -400,9 +314,7 @@ public class USAddressImpl extends EObjectImpl implements USAddress {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(", street: ");
+		result.append(" (street: ");
 		result.append(street);
 		result.append(", city: ");
 		result.append(city);
@@ -410,8 +322,6 @@ public class USAddressImpl extends EObjectImpl implements USAddress {
 		result.append(state);
 		result.append(", zip: ");
 		result.append(zip);
-		result.append(", country: ");
-		result.append(country);
 		result.append(')');
 		return result.toString();
 	}

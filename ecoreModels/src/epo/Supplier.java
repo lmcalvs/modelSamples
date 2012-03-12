@@ -21,9 +21,10 @@ import org.eclipse.emf.ecore.util.FeatureMap;
  * The following features are supported:
  * <ul>
  *   <li>{@link epo.Supplier#getName <em>Name</em>}</li>
+ *   <li>{@link epo.Supplier#getCustomers <em>Customers</em>}</li>
  *   <li>{@link epo.Supplier#getOrders <em>Orders</em>}</li>
- *   <li>{@link epo.Supplier#getPriorityOrders <em>Priority Orders</em>}</li>
- *   <li>{@link epo.Supplier#getStandardOrders <em>Standard Orders</em>}</li>
+ *   <li>{@link epo.Supplier#getPendingOrders <em>Pending Orders</em>}</li>
+ *   <li>{@link epo.Supplier#getShippedOrders <em>Shipped Orders</em>}</li>
  * </ul>
  * </p>
  *
@@ -59,54 +60,67 @@ public interface Supplier extends EObject {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Orders</b></em>' attribute list.
-	 * The list contents are of type {@link org.eclipse.emf.ecore.util.FeatureMap.Entry}.
+	 * Returns the value of the '<em><b>Customers</b></em>' containment reference list.
+	 * The list contents are of type {@link epo.Customer}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Customers</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Customers</em>' containment reference list.
+	 * @see epo.EpoPackage#getSupplier_Customers()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<Customer> getCustomers();
+
+	/**
+	 * Returns the value of the '<em><b>Orders</b></em>' containment reference list.
+	 * The list contents are of type {@link epo.PurchaseOrder}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Orders</em>' attribute list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Orders</em>' attribute list.
+	 * @return the value of the '<em>Orders</em>' containment reference list.
 	 * @see epo.EpoPackage#getSupplier_Orders()
-	 * @model dataType="org.eclipse.emf.ecore.EFeatureMapEntry" many="true"
-	 *        extendedMetaData="kind='group'"
+	 * @model containment="true"
 	 * @generated
 	 */
-	FeatureMap getOrders();
+	EList<PurchaseOrder> getOrders();
 
 	/**
-	 * Returns the value of the '<em><b>Priority Orders</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Pending Orders</b></em>' reference list.
 	 * The list contents are of type {@link epo.PurchaseOrder}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Priority Orders</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Pending Orders</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Priority Orders</em>' containment reference list.
-	 * @see epo.EpoPackage#getSupplier_PriorityOrders()
-	 * @model containment="true" transient="true" volatile="true" derived="true"
-	 *        extendedMetaData="group='#orders'"
+	 * @return the value of the '<em>Pending Orders</em>' reference list.
+	 * @see epo.EpoPackage#getSupplier_PendingOrders()
+	 * @model resolveProxies="false" transient="true" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */
-	EList<PurchaseOrder> getPriorityOrders();
+	EList<PurchaseOrder> getPendingOrders();
 
 	/**
-	 * Returns the value of the '<em><b>Standard Orders</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Shipped Orders</b></em>' reference list.
 	 * The list contents are of type {@link epo.PurchaseOrder}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Standard Orders</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Shipped Orders</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Standard Orders</em>' containment reference list.
-	 * @see epo.EpoPackage#getSupplier_StandardOrders()
-	 * @model containment="true" transient="true" volatile="true" derived="true"
-	 *        extendedMetaData="group='#orders'"
+	 * @return the value of the '<em>Shipped Orders</em>' reference list.
+	 * @see epo.EpoPackage#getSupplier_ShippedOrders()
+	 * @model resolveProxies="false" transient="true" changeable="false" volatile="true" derived="true"
 	 * @generated
 	 */
-	EList<PurchaseOrder> getStandardOrders();
+	EList<PurchaseOrder> getShippedOrders();
 
 } // Supplier

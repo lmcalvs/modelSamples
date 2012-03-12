@@ -9,14 +9,18 @@ package epo.impl;
 import epo.EpoPackage;
 import epo.Item;
 
+import epo.PurchaseOrder;
 import java.util.Date;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.EObjectImpl;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,6 +29,7 @@ import org.eclipse.emf.ecore.impl.EObjectImpl;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link epo.impl.ItemImpl#getOrder <em>Order</em>}</li>
  *   <li>{@link epo.impl.ItemImpl#getProductName <em>Product Name</em>}</li>
  *   <li>{@link epo.impl.ItemImpl#getQuantity <em>Quantity</em>}</li>
  *   <li>{@link epo.impl.ItemImpl#getUSPrice <em>US Price</em>}</li>
@@ -181,6 +186,47 @@ public class ItemImpl extends EObjectImpl implements Item {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public PurchaseOrder getOrder() {
+		if (eContainerFeatureID() != EpoPackage.ITEM__ORDER) return null;
+		return (PurchaseOrder)eContainer();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetOrder(PurchaseOrder newOrder, NotificationChain msgs) {
+		msgs = eBasicSetContainer((InternalEObject)newOrder, EpoPackage.ITEM__ORDER, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setOrder(PurchaseOrder newOrder) {
+		if (newOrder != eInternalContainer() || (eContainerFeatureID() != EpoPackage.ITEM__ORDER && newOrder != null)) {
+			if (EcoreUtil.isAncestor(this, newOrder))
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+			NotificationChain msgs = null;
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
+			if (newOrder != null)
+				msgs = ((InternalEObject)newOrder).eInverseAdd(this, EpoPackage.PURCHASE_ORDER__ITEMS, PurchaseOrder.class, msgs);
+			msgs = basicSetOrder(newOrder, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, EpoPackage.ITEM__ORDER, newOrder, newOrder));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public String getProductName() {
 		return productName;
 	}
@@ -308,8 +354,54 @@ public class ItemImpl extends EObjectImpl implements Item {
 	 * @generated
 	 */
 	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case EpoPackage.ITEM__ORDER:
+				if (eInternalContainer() != null)
+					msgs = eBasicRemoveFromContainer(msgs);
+				return basicSetOrder((PurchaseOrder)otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case EpoPackage.ITEM__ORDER:
+				return basicSetOrder(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
+		switch (eContainerFeatureID()) {
+			case EpoPackage.ITEM__ORDER:
+				return eInternalContainer().eInverseRemove(this, EpoPackage.PURCHASE_ORDER__ITEMS, PurchaseOrder.class, msgs);
+		}
+		return super.eBasicRemoveFromContainerFeature(msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case EpoPackage.ITEM__ORDER:
+				return getOrder();
 			case EpoPackage.ITEM__PRODUCT_NAME:
 				return getProductName();
 			case EpoPackage.ITEM__QUANTITY:
@@ -334,6 +426,9 @@ public class ItemImpl extends EObjectImpl implements Item {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case EpoPackage.ITEM__ORDER:
+				setOrder((PurchaseOrder)newValue);
+				return;
 			case EpoPackage.ITEM__PRODUCT_NAME:
 				setProductName((String)newValue);
 				return;
@@ -364,6 +459,9 @@ public class ItemImpl extends EObjectImpl implements Item {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case EpoPackage.ITEM__ORDER:
+				setOrder((PurchaseOrder)null);
+				return;
 			case EpoPackage.ITEM__PRODUCT_NAME:
 				setProductName(PRODUCT_NAME_EDEFAULT);
 				return;
@@ -394,6 +492,8 @@ public class ItemImpl extends EObjectImpl implements Item {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case EpoPackage.ITEM__ORDER:
+				return getOrder() != null;
 			case EpoPackage.ITEM__PRODUCT_NAME:
 				return PRODUCT_NAME_EDEFAULT == null ? productName != null : !PRODUCT_NAME_EDEFAULT.equals(productName);
 			case EpoPackage.ITEM__QUANTITY:

@@ -72,20 +72,36 @@ public class EpoAdapterFactory extends AdapterFactoryImpl {
 	protected EpoSwitch<Adapter> modelSwitch =
 		new EpoSwitch<Adapter>() {
 			@Override
-			public Adapter casePurchaseOrder(PurchaseOrder object) {
-				return createPurchaseOrderAdapter();
+			public Adapter caseItem(Item object) {
+				return createItemAdapter();
 			}
 			@Override
 			public Adapter caseUSAddress(USAddress object) {
 				return createUSAddressAdapter();
 			}
 			@Override
-			public Adapter caseItem(Item object) {
-				return createItemAdapter();
+			public Adapter casePurchaseOrder(PurchaseOrder object) {
+				return createPurchaseOrderAdapter();
+			}
+			@Override
+			public Adapter caseAddress(Address object) {
+				return createAddressAdapter();
 			}
 			@Override
 			public Adapter caseSupplier(Supplier object) {
 				return createSupplierAdapter();
+			}
+			@Override
+			public Adapter caseCustomer(Customer object) {
+				return createCustomerAdapter();
+			}
+			@Override
+			public Adapter caseGlobalAddress(GlobalAddress object) {
+				return createGlobalAddressAdapter();
+			}
+			@Override
+			public Adapter caseGlobalLocation(GlobalLocation object) {
+				return createGlobalLocationAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -118,6 +134,20 @@ public class EpoAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createPurchaseOrderAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link epo.Address <em>Address</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see epo.Address
+	 * @generated
+	 */
+	public Adapter createAddressAdapter() {
 		return null;
 	}
 
@@ -160,6 +190,48 @@ public class EpoAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createSupplierAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link epo.Customer <em>Customer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see epo.Customer
+	 * @generated
+	 */
+	public Adapter createCustomerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link epo.GlobalAddress <em>Global Address</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see epo.GlobalAddress
+	 * @generated
+	 */
+	public Adapter createGlobalAddressAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link epo.GlobalLocation <em>Global Location</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see epo.GlobalLocation
+	 * @generated
+	 */
+	public Adapter createGlobalLocationAdapter() {
 		return null;
 	}
 

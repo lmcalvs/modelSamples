@@ -16,12 +16,10 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link epo.USAddress#getName <em>Name</em>}</li>
  *   <li>{@link epo.USAddress#getStreet <em>Street</em>}</li>
  *   <li>{@link epo.USAddress#getCity <em>City</em>}</li>
  *   <li>{@link epo.USAddress#getState <em>State</em>}</li>
  *   <li>{@link epo.USAddress#getZip <em>Zip</em>}</li>
- *   <li>{@link epo.USAddress#getCountry <em>Country</em>}</li>
  * </ul>
  * </p>
  *
@@ -29,33 +27,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface USAddress extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
-	 * @see epo.EpoPackage#getUSAddress_Name()
-	 * @model
-	 * @generated
-	 */
-	String getName();
-
-	/**
-	 * Sets the value of the '{@link epo.USAddress#getName <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
-	 * @see #getName()
-	 * @generated
-	 */
-	void setName(String value);
-
+public interface USAddress extends Address {
 	/**
 	 * Returns the value of the '<em><b>Street</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -159,21 +131,5 @@ public interface USAddress extends EObject {
 	 * @generated
 	 */
 	void setZip(int value);
-
-	/**
-	 * Returns the value of the '<em><b>Country</b></em>' attribute.
-	 * The default value is <code>"US"</code>.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Country</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Country</em>' attribute.
-	 * @see epo.EpoPackage#getUSAddress_Country()
-	 * @model default="US" changeable="false"
-	 * @generated
-	 */
-	String getCountry();
 
 } // USAddress
