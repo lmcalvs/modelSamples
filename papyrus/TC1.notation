@@ -172,6 +172,42 @@
     <element xmi:type="uml:Class" href="TC1.uml#_qZ9XYGxuEeG-rvVZwk4u5g"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qZ-lgWxuEeG-rvVZwk4u5g" x="635" y="211"/>
   </children>
+  <children xmi:type="notation:Shape" xmi:id="_1wrikGxvEeG-rvVZwk4u5g" type="2005" fontName="Segoe UI" lineColor="0">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_1wsJoGxvEeG-rvVZwk4u5g" source="ShadowFigure">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_1wsJoWxvEeG-rvVZwk4u5g" key="ShadowFigure_Value" value="false"/>
+    </eAnnotations>
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_1wsJomxvEeG-rvVZwk4u5g" source="displayNameLabelIcon">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_1wsJo2xvEeG-rvVZwk4u5g" key="displayNameLabelIcon_value" value="false"/>
+    </eAnnotations>
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_1wswsGxvEeG-rvVZwk4u5g" source="QualifiedName">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_1wswsWxvEeG-rvVZwk4u5g" key="QualifiedNameDepth" value="1000"/>
+    </eAnnotations>
+    <children xmi:type="notation:DecorationNode" xmi:id="_1wswsmxvEeG-rvVZwk4u5g" type="5020"/>
+    <children xmi:type="notation:DecorationNode" xmi:id="_1wsws2xvEeG-rvVZwk4u5g" type="7009">
+      <children xmi:type="notation:Shape" xmi:id="_3Lhv8GxvEeG-rvVZwk4u5g" type="3009" fontName="Segoe UI" lineColor="0">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_3LiXAGxvEeG-rvVZwk4u5g" source="ShadowFigure">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_3LiXAWxvEeG-rvVZwk4u5g" key="ShadowFigure_Value" value="false"/>
+        </eAnnotations>
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_3LiXAmxvEeG-rvVZwk4u5g" source="displayNameLabelIcon">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_3LiXA2xvEeG-rvVZwk4u5g" key="displayNameLabelIcon_value" value="false"/>
+        </eAnnotations>
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_3Li-EGxvEeG-rvVZwk4u5g" source="QualifiedName">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_3Li-EWxvEeG-rvVZwk4u5g" key="QualifiedNameDepth" value="1000"/>
+        </eAnnotations>
+        <children xmi:type="notation:DecorationNode" xmi:id="_3Li-EmxvEeG-rvVZwk4u5g" type="5017"/>
+        <children xmi:type="notation:DecorationNode" xmi:id="_3Li-E2xvEeG-rvVZwk4u5g" type="7010">
+          <styles xmi:type="notation:TitleStyle" xmi:id="_3Li-FGxvEeG-rvVZwk4u5g"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3Li-FWxvEeG-rvVZwk4u5g"/>
+        </children>
+        <element xmi:type="uml:Package" href="TC1.uml#_3LbpUGxvEeG-rvVZwk4u5g"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3Lhv8WxvEeG-rvVZwk4u5g" x="91" y="27" height="57"/>
+      </children>
+      <styles xmi:type="notation:TitleStyle" xmi:id="_1wswtGxvEeG-rvVZwk4u5g"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1wswtWxvEeG-rvVZwk4u5g"/>
+    </children>
+    <element xmi:type="uml:Model" href="TC1.uml#_1wptYGxvEeG-rvVZwk4u5g"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_1wrikWxvEeG-rvVZwk4u5g" x="663" y="361" height="144"/>
+  </children>
   <styles xmi:type="notation:DiagramStyle" xmi:id="_yZJLoeBtEeC2NdPostZ7ew"/>
   <element xmi:type="uml:Model" href="TC1.uml#_yZDFAOBtEeC2NdPostZ7ew"/>
   <edges xmi:type="notation:Connector" xmi:id="_91LxIOBtEeC2NdPostZ7ew" type="4002" source="_4z96AOBtEeC2NdPostZ7ew" target="_y6xSAOBtEeC2NdPostZ7ew" lineColor="0">

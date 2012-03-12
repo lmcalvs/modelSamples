@@ -9,7 +9,7 @@
   <packagedElement xmi:type="uml:Interface" xmi:id="_z5OeUOBtEeC2NdPostZ7ew" name="Interface0">
     <ownedAttribute xmi:id="_1jp_0OBtEeC2NdPostZ7ew" name="Property0"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Model" xmi:id="_3TrL8OBtEeC2NdPostZ7ew" name="Model0">
+  <packagedElement xmi:type="uml:Model" xmi:id="_3TrL8OBtEeC2NdPostZ7ew" name="Model0" visibility="package">
     <packagedElement xmi:type="uml:Package" xmi:id="_3xfwYOBtEeC2NdPostZ7ew" name="Package0">
       <packagedElement xmi:type="uml:Class" xmi:id="_4z8r4OBtEeC2NdPostZ7ew" name="Class0" clientDependency="_-03sgOBtEeC2NdPostZ7ew">
         <generalization xmi:id="_91KjAOBtEeC2NdPostZ7ew" general="_y6wD4OBtEeC2NdPostZ7ew"/>
@@ -18,4 +18,7 @@
     </packagedElement>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_qZ9XYGxuEeG-rvVZwk4u5g" name="TestClassOne"/>
+  <packagedElement xmi:type="uml:Model" xmi:id="_1wptYGxvEeG-rvVZwk4u5g" name="Model1">
+    <packagedElement xmi:type="uml:Package" xmi:id="_3LbpUGxvEeG-rvVZwk4u5g" name="Package1"/>
+  </packagedElement>
 </uml:Model>
