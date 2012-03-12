@@ -7,6 +7,7 @@
 package epo.impl;
 
 import epo.Address;
+import epo.CanadianAddress;
 import epo.Customer;
 import epo.EpoFactory;
 import epo.EpoPackage;
@@ -91,6 +92,13 @@ public class EpoPackageImpl extends EPackageImpl implements EpoPackage {
 	 * @generated
 	 */
 	private EClass globalLocationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass canadianAddressEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -530,6 +538,51 @@ public class EpoPackageImpl extends EPackageImpl implements EpoPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getCanadianAddress() {
+		return canadianAddressEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCanadianAddress_Street() {
+		return (EAttribute)canadianAddressEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCanadianAddress_City() {
+		return (EAttribute)canadianAddressEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCanadianAddress_Province() {
+		return (EAttribute)canadianAddressEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getCanadianAddress_PostalCode() {
+		return (EAttribute)canadianAddressEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getOrderStatus() {
 		return orderStatusEEnum;
 	}
@@ -627,6 +680,12 @@ public class EpoPackageImpl extends EPackageImpl implements EpoPackage {
 		globalLocationEClass = createEClass(GLOBAL_LOCATION);
 		createEAttribute(globalLocationEClass, GLOBAL_LOCATION__COUNTRY_CODE);
 
+		canadianAddressEClass = createEClass(CANADIAN_ADDRESS);
+		createEAttribute(canadianAddressEClass, CANADIAN_ADDRESS__STREET);
+		createEAttribute(canadianAddressEClass, CANADIAN_ADDRESS__CITY);
+		createEAttribute(canadianAddressEClass, CANADIAN_ADDRESS__PROVINCE);
+		createEAttribute(canadianAddressEClass, CANADIAN_ADDRESS__POSTAL_CODE);
+
 		// Create enums
 		orderStatusEEnum = createEEnum(ORDER_STATUS);
 
@@ -666,6 +725,7 @@ public class EpoPackageImpl extends EPackageImpl implements EpoPackage {
 		usAddressEClass.getESuperTypes().add(this.getAddress());
 		globalAddressEClass.getESuperTypes().add(this.getAddress());
 		globalAddressEClass.getESuperTypes().add(this.getGlobalLocation());
+		canadianAddressEClass.getESuperTypes().add(this.getAddress());
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(itemEClass, Item.class, "Item", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -714,6 +774,12 @@ public class EpoPackageImpl extends EPackageImpl implements EpoPackage {
 
 		initEClass(globalLocationEClass, GlobalLocation.class, "GlobalLocation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGlobalLocation_CountryCode(), ecorePackage.getEInt(), "countryCode", null, 0, 1, GlobalLocation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(canadianAddressEClass, CanadianAddress.class, "CanadianAddress", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getCanadianAddress_Street(), ecorePackage.getEString(), "street", null, 0, 1, CanadianAddress.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCanadianAddress_City(), ecorePackage.getEString(), "city", null, 0, 1, CanadianAddress.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCanadianAddress_Province(), ecorePackage.getEString(), "province", null, 0, 1, CanadianAddress.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getCanadianAddress_PostalCode(), ecorePackage.getEString(), "postalCode", null, 0, 1, CanadianAddress.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(orderStatusEEnum, OrderStatus.class, "OrderStatus");

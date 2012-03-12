@@ -70,6 +70,7 @@ public class EpoFactoryImpl extends EFactoryImpl implements EpoFactory {
 			case EpoPackage.CUSTOMER: return createCustomer();
 			case EpoPackage.GLOBAL_ADDRESS: return createGlobalAddress();
 			case EpoPackage.GLOBAL_LOCATION: return createGlobalLocation();
+			case EpoPackage.CANADIAN_ADDRESS: return createCanadianAddress();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -181,6 +182,16 @@ public class EpoFactoryImpl extends EFactoryImpl implements EpoFactory {
 	public GlobalLocation createGlobalLocation() {
 		GlobalLocationImpl globalLocation = new GlobalLocationImpl();
 		return globalLocation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CanadianAddress createCanadianAddress() {
+		CanadianAddressImpl canadianAddress = new CanadianAddressImpl();
+		return canadianAddress;
 	}
 
 	/**

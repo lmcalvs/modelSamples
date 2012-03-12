@@ -245,6 +245,38 @@
     <element xmi:type="ecore:EClass" href="ExtendedPO.ecore#//GlobalLocation"/>
     <layoutConstraint xmi:type="notation:Bounds" xmi:id="_WoJRNGxXEeG-rvVZwk4u5g" x="1014"/>
   </children>
+  <children xmi:type="notation:Node" xmi:id="_xQ18MGxZEeG-rvVZwk4u5g" type="1001">
+    <children xmi:type="notation:Node" xmi:id="_xQ3KUGxZEeG-rvVZwk4u5g" type="4001"/>
+    <children xmi:type="notation:Node" xmi:id="_xQ3KUWxZEeG-rvVZwk4u5g" type="5001">
+      <children xmi:type="notation:Node" xmi:id="_zjyPMGxZEeG-rvVZwk4u5g" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ExtendedPO.ecore#//CanadianAddress/street"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_zjyPMWxZEeG-rvVZwk4u5g"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_3xoIoGxZEeG-rvVZwk4u5g" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ExtendedPO.ecore#//CanadianAddress/city"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_3xoIoWxZEeG-rvVZwk4u5g"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_6ADvEGxZEeG-rvVZwk4u5g" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ExtendedPO.ecore#//CanadianAddress/province"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_6ADvEWxZEeG-rvVZwk4u5g"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_8lv-8GxZEeG-rvVZwk4u5g" type="2001">
+        <element xmi:type="ecore:EAttribute" href="ExtendedPO.ecore#//CanadianAddress/postalCode"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_8lv-8WxZEeG-rvVZwk4u5g"/>
+      </children>
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_xQ3KUmxZEeG-rvVZwk4u5g"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_xQ3KU2xZEeG-rvVZwk4u5g"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_xQ3KVGxZEeG-rvVZwk4u5g"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_xQ3xYGxZEeG-rvVZwk4u5g" type="5002">
+      <styles xmi:type="notation:DrawerStyle" xmi:id="_xQ3xYWxZEeG-rvVZwk4u5g"/>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_xQ3xYmxZEeG-rvVZwk4u5g"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_xQ3xY2xZEeG-rvVZwk4u5g"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_xQ18MWxZEeG-rvVZwk4u5g" fontColor="4210752" fontName="Segoe UI" fontHeight="10" fillColor="13761016" lineColor="8421504"/>
+    <element xmi:type="ecore:EClass" href="ExtendedPO.ecore#//CanadianAddress"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_xQ18MmxZEeG-rvVZwk4u5g" x="84" y="144" width="162" height="111"/>
+  </children>
   <styles xmi:type="notation:DiagramStyle" xmi:id="_Wng_EWxXEeG-rvVZwk4u5g"/>
   <element xmi:type="ecore:EPackage" href="ExtendedPO.ecore#/"/>
   <edges xmi:type="notation:Edge" xmi:id="_WoLGYmxXEeG-rvVZwk4u5g" type="3002" source="_WnuacGxXEeG-rvVZwk4u5g" target="_Wn6AoWxXEeG-rvVZwk4u5g">
@@ -267,7 +299,7 @@
     <element xsi:nil="true"/>
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_WoM7k2xXEeG-rvVZwk4u5g" points="[0, 0, -159, 84]$[0, -31, -159, 53]$[142, -31, -17, 53]$[142, -84, -17, 0]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Ws7DgGxXEeG-rvVZwk4u5g" id="(0.5,0.0)"/>
-    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Ws7DgWxXEeG-rvVZwk4u5g" id="(0.24603174603174602,1.0)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Ws7DgWxXEeG-rvVZwk4u5g" id="(0.38095238095238093,0.9264705882352942)"/>
   </edges>
   <edges xmi:type="notation:Edge" xmi:id="_WoNioGxXEeG-rvVZwk4u5g" type="3002" source="_Wn6AoWxXEeG-rvVZwk4u5g" target="_WnuacGxXEeG-rvVZwk4u5g">
     <children xmi:type="notation:Node" xmi:id="_WoOJsGxXEeG-rvVZwk4u5g" type="4011">
@@ -422,5 +454,13 @@
     <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_WoZv42xXEeG-rvVZwk4u5g" points="[0, 0, -153, 99]$[0, -30, -153, 69]$[153, -30, 0, 69]$[153, -99, 0, 0]"/>
     <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Ws5OUWxXEeG-rvVZwk4u5g" id="(0.6666666666666666,0.0)"/>
     <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Ws51YGxXEeG-rvVZwk4u5g" id="(0.5,1.0)"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_CoEtwGxaEeG-rvVZwk4u5g" type="3003" source="_xQ18MGxZEeG-rvVZwk4u5g" target="_Wn9D8mxXEeG-rvVZwk4u5g">
+    <styles xmi:type="notation:ConnectorStyle" xmi:id="_CoEtwWxaEeG-rvVZwk4u5g" routing="Rectilinear" lineColor="4210752"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_CoEtwmxaEeG-rvVZwk4u5g" fontName="Segoe UI"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_CoEtw2xaEeG-rvVZwk4u5g" points="[8, -5, -304, 101]$[8, -78, -304, 28]$[319, -78, 7, 28]$[319, -96, 7, 10]"/>
+    <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_CoHKAGxaEeG-rvVZwk4u5g" id="(0.5061728395061729,0.04477611940298507)"/>
+    <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_CoHxEGxaEeG-rvVZwk4u5g" id="(0.05555555555555555,0.8529411764705882)"/>
   </edges>
 </notation:Diagram>

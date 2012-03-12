@@ -89,6 +89,15 @@ public interface EpoFactory extends EFactory {
 	GlobalLocation createGlobalLocation();
 
 	/**
+	 * Returns a new object of class '<em>Canadian Address</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Canadian Address</em>'.
+	 * @generated
+	 */
+	CanadianAddress createCanadianAddress();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

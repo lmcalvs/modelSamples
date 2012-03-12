@@ -538,6 +538,79 @@ public interface EpoPackage extends EPackage {
 	int GLOBAL_LOCATION_FEATURE_COUNT = 1;
 
 	/**
+	 * The meta object id for the '{@link epo.impl.CanadianAddressImpl <em>Canadian Address</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see epo.impl.CanadianAddressImpl
+	 * @see epo.impl.EpoPackageImpl#getCanadianAddress()
+	 * @generated
+	 */
+	int CANADIAN_ADDRESS = 8;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CANADIAN_ADDRESS__NAME = ADDRESS__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Country</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CANADIAN_ADDRESS__COUNTRY = ADDRESS__COUNTRY;
+
+	/**
+	 * The feature id for the '<em><b>Street</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CANADIAN_ADDRESS__STREET = ADDRESS_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>City</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CANADIAN_ADDRESS__CITY = ADDRESS_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Province</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CANADIAN_ADDRESS__PROVINCE = ADDRESS_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Postal Code</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CANADIAN_ADDRESS__POSTAL_CODE = ADDRESS_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of structural features of the '<em>Canadian Address</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CANADIAN_ADDRESS_FEATURE_COUNT = ADDRESS_FEATURE_COUNT + 4;
+
+	/**
 	 * The meta object id for the '{@link epo.OrderStatus <em>Order Status</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -545,7 +618,7 @@ public interface EpoPackage extends EPackage {
 	 * @see epo.impl.EpoPackageImpl#getOrderStatus()
 	 * @generated
 	 */
-	int ORDER_STATUS = 8;
+	int ORDER_STATUS = 9;
 
 	/**
 	 * The meta object id for the '<em>SKU</em>' data type.
@@ -555,7 +628,7 @@ public interface EpoPackage extends EPackage {
 	 * @see epo.impl.EpoPackageImpl#getSKU()
 	 * @generated
 	 */
-	int SKU = 9;
+	int SKU = 10;
 
 	/**
 	 * The meta object id for the '<em>Date</em>' data type.
@@ -565,7 +638,7 @@ public interface EpoPackage extends EPackage {
 	 * @see epo.impl.EpoPackageImpl#getDate()
 	 * @generated
 	 */
-	int DATE = 10;
+	int DATE = 11;
 
 
 	/**
@@ -990,6 +1063,60 @@ public interface EpoPackage extends EPackage {
 	EAttribute getGlobalLocation_CountryCode();
 
 	/**
+	 * Returns the meta object for class '{@link epo.CanadianAddress <em>Canadian Address</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Canadian Address</em>'.
+	 * @see epo.CanadianAddress
+	 * @generated
+	 */
+	EClass getCanadianAddress();
+
+	/**
+	 * Returns the meta object for the attribute '{@link epo.CanadianAddress#getStreet <em>Street</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Street</em>'.
+	 * @see epo.CanadianAddress#getStreet()
+	 * @see #getCanadianAddress()
+	 * @generated
+	 */
+	EAttribute getCanadianAddress_Street();
+
+	/**
+	 * Returns the meta object for the attribute '{@link epo.CanadianAddress#getCity <em>City</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>City</em>'.
+	 * @see epo.CanadianAddress#getCity()
+	 * @see #getCanadianAddress()
+	 * @generated
+	 */
+	EAttribute getCanadianAddress_City();
+
+	/**
+	 * Returns the meta object for the attribute '{@link epo.CanadianAddress#getProvince <em>Province</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Province</em>'.
+	 * @see epo.CanadianAddress#getProvince()
+	 * @see #getCanadianAddress()
+	 * @generated
+	 */
+	EAttribute getCanadianAddress_Province();
+
+	/**
+	 * Returns the meta object for the attribute '{@link epo.CanadianAddress#getPostalCode <em>Postal Code</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Postal Code</em>'.
+	 * @see epo.CanadianAddress#getPostalCode()
+	 * @see #getCanadianAddress()
+	 * @generated
+	 */
+	EAttribute getCanadianAddress_PostalCode();
+
+	/**
 	 * Returns the meta object for enum '{@link epo.OrderStatus <em>Order Status</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1370,6 +1497,48 @@ public interface EpoPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute GLOBAL_LOCATION__COUNTRY_CODE = eINSTANCE.getGlobalLocation_CountryCode();
+
+		/**
+		 * The meta object literal for the '{@link epo.impl.CanadianAddressImpl <em>Canadian Address</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see epo.impl.CanadianAddressImpl
+		 * @see epo.impl.EpoPackageImpl#getCanadianAddress()
+		 * @generated
+		 */
+		EClass CANADIAN_ADDRESS = eINSTANCE.getCanadianAddress();
+
+		/**
+		 * The meta object literal for the '<em><b>Street</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CANADIAN_ADDRESS__STREET = eINSTANCE.getCanadianAddress_Street();
+
+		/**
+		 * The meta object literal for the '<em><b>City</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CANADIAN_ADDRESS__CITY = eINSTANCE.getCanadianAddress_City();
+
+		/**
+		 * The meta object literal for the '<em><b>Province</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CANADIAN_ADDRESS__PROVINCE = eINSTANCE.getCanadianAddress_Province();
+
+		/**
+		 * The meta object literal for the '<em><b>Postal Code</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CANADIAN_ADDRESS__POSTAL_CODE = eINSTANCE.getCanadianAddress_PostalCode();
 
 		/**
 		 * The meta object literal for the '{@link epo.OrderStatus <em>Order Status</em>}' enum.

@@ -60,5 +60,11 @@
     <genClasses ecoreClass="ExtendedPO.ecore#//GlobalLocation">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExtendedPO.ecore#//GlobalLocation/countryCode"/>
     </genClasses>
+    <genClasses ecoreClass="ExtendedPO.ecore#//CanadianAddress">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExtendedPO.ecore#//CanadianAddress/street"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExtendedPO.ecore#//CanadianAddress/city"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExtendedPO.ecore#//CanadianAddress/province"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute ExtendedPO.ecore#//CanadianAddress/postalCode"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>
